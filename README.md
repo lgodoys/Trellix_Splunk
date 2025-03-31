@@ -49,7 +49,7 @@ After install add-on, please configure the add-on based on following suggestions
 
 ## Issues
 
-Please, feel free to create an Issue in [Issues](issues/new)
+Please, feel free to create an Issue in [Issues](/../../issues/new)
 
 ## Contributing
 
