@@ -47,6 +47,10 @@ After install add-on, please configure the add-on based on following suggestions
 ![Inputs Screenshot](screenshots/add_input_3.png)
 ![Inputs Screenshot](screenshots/add_input_4.png)
 
+## Issues
+
+Please, feel free to create an Issue in [Issues](issues/new)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
