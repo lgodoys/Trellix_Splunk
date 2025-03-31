@@ -14,6 +14,17 @@ Corrected Help information in Configuration page that has an issue for text leng
 * Version 1.0.4: Mar 31, 2025
 Updated Splunk Python Library to newest one based on Splunk Vetted Program.
 
+## Installation
+
+When installing Trellix Add-on for Splunk in your environment, please, meet following requirements:
+
+* Splunk version: >=8.0.0.
+* In distributed/clusterized environment, it is recommended to install the add-on into a heavy forwarder.
+* In single instance/distributed non-clusterized environment, you must install in a search head, indexer and/or heavy forwarder. Please, install the add-on only in one of those servers to ingestion purposes. You can install the add-on in other servers for parsing purposes.
+
+After install add-on, please configure the add-on based on following suggestions:
+* After install, please set the required account. In your Splunk Web, go to Apps/Trellix MVision EPO Add-on for Splunk, click on Configuration
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
