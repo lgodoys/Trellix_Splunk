@@ -45,7 +45,11 @@ def format_timestamp(timestamp, ft_rule='%Y-%m-%d %H:%M:%S'):
     return calc_time
 
 #Function "format_time" used to convert timestamp string from ISO format to common format used in timezone
-def format_time(timestamp, ft_rule='%Y-%m-%dT%H:%M:%S.%fZ'):
+def format_time(timestamp):
+    if len(timestamp)>21:
+        ft_rule='%Y-%m-%dT%H:%M:%S.%fZ'
+    else:
+        ft_rule='%Y-%m-%dT%H:%M:%SZ'
     input_time = datetime.datetime.strptime(timestamp,ft_rule)
     input_time = input_time.replace(tzinfo=FROM_TZ)
     calc_time = input_time.astimezone(TO_TZ)
@@ -126,7 +130,7 @@ def request_help(max_retries,backoff_sec):
         while attempt_times >= 0:
             try:
                 if "https" in url:
-                    response = requests.request(method, url, params=parameters, headers=headers, data=payload, timeout=timeout, verify=False)
+                    response = requests.request(method, url, params=parameters, headers=headers, data=payload, timeout=timeout)
                     raise_for_status(response)
                     return response
                 else:

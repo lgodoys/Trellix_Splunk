@@ -1,30 +1,30 @@
 {
   "schemaVersion": "2.0.0",
   "info": {
-    "title": "Trellix Add-on for Splunk",
+    "title": "Trellix MVision EPO Add-on for Splunk",
     "id": {
       "group": null,
       "name": "Trellix_Splunk",
-      "version": "1.0.0"
+      "version": "1.0.4"
     },
     "author": [
       {
         "name": "Leonardo Godoy",
-        "email": "leonardo@lgodoys.dev",
-        "company": "LGODOYS.dev"
+        "email": null,
+        "company": null
       }
     ],
     "releaseDate": null,
-    "description": "Trellix Add-on for Splunk was developed to solve the data ingest from Trellix MVision EPO API on Splunk to use cases in Splunk Enterprise and Splunk Enterprise Security. Trellix Add-on for Splunk is the Technical Add-on (TA) developed for ingest or map security data collected from Trellix MVision EPO API. Trellix Add-on for Splunk provides common information model (CIM) knowledge, to use with other Splunk Enterprise Apps such Splunk Enterprise Security.",
+    "description": "Trellix MVision EPO Add-on for Splunk was developed to solve the data ingest from Trellix MVision EPO (formerly McAfee EPO) API on Splunk to use cases in Splunk Enterprise and Splunk Enterprise Security. Trellix MVision EPO Add-on for Splunk is the Technical Add-on (TA) developed for ingest or map security data collected from Trellix MVision EPO API. Trellix MVision EPO Add-on for Splunk provides common information model (CIM) knowledge, to use with other Splunk Enterprise Apps such Splunk Enterprise Security.",
     "classification": {
-      "intendedAudience": null,
-      "categories": [],
-      "developmentStatus": null
+      "intendedAudience": "IT Professionals",
+      "categories": ["Security, Fraud & Compliance","SIEM"],
+      "developmentStatus": "Production/Stable"
     },
     "commonInformationModels": null,
     "license": {
       "name": null,
-      "text": null,
+      "text": "./LICENSE.md",
       "uri": null
     },
     "privacyPolicy": {
@@ -34,7 +34,7 @@
     },
     "releaseNotes": {
       "name": null,
-      "text": "./README.txt",
+      "text": "./README.md",
       "uri": null
     }
   },
@@ -42,16 +42,17 @@
   "tasks": null,
   "inputGroups": null,
   "incompatibleApps": null,
-  "platformRequirements": {
-    "splunk": {
-      "Enterprise": "*"
-    }
-  },
+  "platformRequirements": null,
   "supportedDeployments": [
     "_standalone",
-    "_distributed"
+    "_distributed",
+    "_search_head_clustering"
   ],
-  "targetWorkloads": ["_search_heads","_forwarders"]
+  "targetWorkloads": [
+    "_search_heads",
+    "_indexers",
+    "_forwarders"
+  ]
 }
 # The following sections can be customized and added to the manifest. For detailed information,
 # see the documentation at http://dev.splunk.com/view/packaging-toolkit/SP-CAAAE9V

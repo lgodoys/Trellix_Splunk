@@ -1,8 +1,8 @@
 {
     "meta": {
         "name": "Trellix_Splunk",
-        "displayName": "Trellix Add-on for Splunk",
-        "version": "1.0.0",
+        "displayName": "Trellix MVision EPO Add-on for Splunk",
+        "version": "1.0.4",
         "restRoot": "Trellix_Splunk",
         "schemaVersion": "0.0.3"
     },
@@ -55,7 +55,7 @@
                         {
                             "field": "url",
                             "label": "URL",
-                            "help": "Select a unique URL for this account. Refer to https://docs.trellix.com/ to get specific FQDN and Region for your account",
+                            "help": "Select a unique FQDN for this account. Refer to https://docs.trellix.com/ to get specific FQDN and Region for your account",
                             "required": true,
                             "type": "singleSelect",
                             "options": {
@@ -63,11 +63,11 @@
                                 "autoCompleteFields": [
                                     {
                                         "value": "https://arevents.manage.trellix.com",
-                                        "label": "Global"
+                                        "label": "United States (Global)"
                                     },
                                     {
                                         "value": "https://areventsfrk.manage.trellix.com",
-                                        "label": "Frankfort"
+                                        "label": "Frankfurt"
                                     },
                                     {
                                         "value": "https://areventsind.manage.trellix.com",
@@ -90,9 +90,6 @@
                             "type": "text",
                             "required": true,
                             "help": "Use this field to add your Trellix Username, in format 'user@domain.com'",
-                            "options": {
-                                "placeholder": "Enter the username here"
-                            },
                             "validators": [
                                 {
                                     "type": "string",
@@ -109,9 +106,6 @@
                             "encrypted": true,
                             "required": true,
                             "help": "Use this field to add your Trellix Password",
-                            "options": {
-                                "placeholder": "Enter the password here"
-                            },
                             "validators": [
                                 {
                                     "type": "string",
@@ -329,7 +323,7 @@
                 {
                     "name": "trellix_events",
                     "title": "Trellix Events",
-                    "description": "Gets threat and incident events from Trellix MVision API.",
+                    "description": "Gets threat and incident events from Trellix MVision EPO API.",
                     "entity": [
                         {
                             "field": "name",

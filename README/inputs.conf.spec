@@ -2,5 +2,5 @@
 python.version = {python3}
 global_account = <string>
 start_by_shell = <bool>
-interval = <string>
+interval = <integer>
 index = <string>
