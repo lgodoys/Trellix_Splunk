@@ -31,7 +31,7 @@ After install add-on, please configure the add-on based on following suggestions
 ![Account Screenshot](screenshots/add_account_1.png)
   * Select the required URL for your Trellix Tenant. You have that URL in the Welcome email that Trellix sent you. Please refer to <https://docs.trellix.com/bundle/epolicy-orchestrator-saas-product-guide/page/UUID-beb1dd85-b05c-ec11-5d94-b9b647f99a55.html> to get an updated list of endpoints. The list of URLs notes "Global" and "US" as the same URL. Other URLs points for co-located endpoints.
 ![Account Screenshot](screenshots/add_account_2.png)
-  * Set your Username and Password. The username must be in email account format myaccount@mydomain.com. Please follow Trellix documentation to set appropriate permissions.
+  * Set your Username and Password. The username must be in email account format myaccount@mydomain.com. Please follow Trellix documentation to set appropriate permissions. Set the required Tenant ID too. This data can be retrieved from Trellix Account settings page, and is required in case your user account relies on multiple tenants. If not, leave this field with default value ("default")
 ![Account Screenshot](screenshots/add_account_3.png)
   * Finally, click *Save*. Then, you will have the required account configured to be used in the inputs page.
 ![Account Screenshot](screenshots/config_screen_2.png)
