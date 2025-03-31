@@ -23,7 +23,19 @@ When installing Trellix Add-on for Splunk in your environment, please, meet foll
 * In single instance/distributed non-clusterized environment, you must install in a search head, indexer and/or heavy forwarder. Please, install the add-on only in one of those servers to ingestion purposes. You can install the add-on in other servers for parsing purposes.
 
 After install add-on, please configure the add-on based on following suggestions:
-* After install, please set the required account. In your Splunk Web, go to Apps/Trellix MVision EPO Add-on for Splunk, click on Configuration
+
+* After install, please set the required account. In your Splunk Web, go to Apps/Trellix MVision EPO Add-on for Splunk, click on *Configuration* and in the *Account* section, click **Add**
+![Config Screenshot](screenshots/config_screen_1.png)
+* When adding new account, fill the fields as suggested
+  * Set a recognizable Account name for each account that you might want to be added.
+![Account Screenshot](screenshots/add_account_1.png)
+  * Select the required URL for your Trellix Tenant. You have that URL in the Welcome email that Trellix sent you. Please refer to <https://docs.trellix.com/bundle/epolicy-orchestrator-saas-product-guide/page/UUID-beb1dd85-b05c-ec11-5d94-b9b647f99a55.html> to get an updated list of endpoints. The list of URLs notes "Global" and "US" as the same URL. Other URLs points for co-located endpoints.
+![Account Screenshot](screenshots/add_account_2.png)
+  * Set your Username and Password. The username must be in email account format myaccount@mydomain.com. Please follow Trellix documentation to set appropriate permissions.
+![Account Screenshot](screenshots/add_account_3.png)
+  * Finally, click *Save*. Then, you will have the required account configured to be used in the inputs page.
+![Account Screenshot](screenshots/config_screen_2.png)
+
 
 ## Contributing
 
