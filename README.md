@@ -41,10 +41,10 @@ After install add-on, please configure the add-on based on following suggestions
   * Set a recognizable Input name for each input that you might want to be added.
 ![Inputs Screenshot](screenshots/add_input_1.png)
   * Set time interval to fetch data from Trellix in seconds. Suggested minimum interval is 60 seconds.
-![Inputs Screenshot](screenshots/add_input_2.png)
   * Select the appropriate index to be used. If you leave *default*, will use index=main. Please, create an index before set the input instance.
-![Inputs Screenshot](screenshots/add_input_3.png)
+![Inputs Screenshot](screenshots/add_input_2.png)
   * Select the appropriate Global account to be used. This should have been created following the steps above. Then, click *Add*. You will have the required Input configured to fetch events and incidents for Trellix MVision EPO.
+![Inputs Screenshot](screenshots/add_input_3.png)
 ![Inputs Screenshot](screenshots/add_input_4.png)
 
 ## Contributing
