@@ -2,7 +2,8 @@
 
 Trellix MVision EPO Add-on for Splunk was developed to solve the data ingest from Trellix MVision EPO (formerly McAfee EPO) API on Splunk to use cases in Splunk Enterprise and Splunk Enterprise Security. Trellix MVision EPO Add-on for Splunk is the Technical Add-on (TA) developed for ingest or map security data collected from Trellix MVision EPO API. Trellix MVision EPO Add-on for Splunk provides common information model (CIM) knowledge, to use with other Splunk Enterprise Apps such Splunk Enterprise Security.
 
-> [!IMPORTANT]: This add-on was developed to solve the ingestion for Trellix EPO SaaS, not for On-prem and/or other Trellix services.
+> [!IMPORTANT]  
+> This add-on was developed to solve the ingestion for Trellix EPO SaaS, not for On-prem and/or other Trellix services.
 
 ## Release notes
 
