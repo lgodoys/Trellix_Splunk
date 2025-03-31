@@ -60,6 +60,11 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Contact info
+
+Email: [leonardo@lgodoys.dev](mailto:leonardo@lgodoys.dev)
+Github: <https://github.com/lgodoys/Trellix_Splunk> (please, create an issue in case of any issue related with the code is detected)
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
