@@ -20,14 +20,25 @@ def collect_events(helper, ew):
     username = helper.get_arg('global_account')['username']
     password = helper.get_arg('global_account')['password']
     endpoint = helper.get_arg('global_account')['url']
+    https_proxy = helper.get_global_setting("https_proxy")
     tenant_id = helper.get_arg('global_account')['tenant_id']
     backoff_time = float(helper.get_global_setting("backoff_time") or 10)
+    
+    proxies = {}
+    
+    if https_proxy is not None:
+        proxies['https'] = https_proxy
     
     if not endpoint:
         helper.log_error("[MVision EPO] No valid config, will pass")
         return 0
         
-    access_token = get_token(username,password,tenant_id)
+    access_token = get_token(
+        username=username,
+        password=password,
+        tenant=tenant_id,
+        proxies=proxies
+    )
     HEADERS['Authorization'] = 'Bearer '+access_token
 
     parse_url = urlparse(endpoint)
@@ -36,7 +47,9 @@ def collect_events(helper, ew):
     else:
         endpoint = "{}://{}".format(parse_url.scheme, parse_url.netloc)
         helper.log_info(f"[MVision EPO] Get endpoint: {endpoint}")
-
+    
+    
+        
     nowTime = format_iso_time()
 
     type = ["threats","incidents"]
@@ -65,7 +78,8 @@ def collect_events(helper, ew):
                     url=endpoint + EVENT_PATH,
                     method="GET",
                     parameters=params,
-                    headers=HEADERS
+                    headers=HEADERS,
+                    proxies = proxies
                 )
                 res.raise_for_status()
                 data = res.json()

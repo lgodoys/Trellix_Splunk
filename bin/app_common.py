@@ -124,13 +124,13 @@ def raise_for_status(response):
 #Function "request_help" creates a helper for HTTP/s requests, allowing to manage retries and delay for retries.
 def request_help(max_retries,backoff_sec):
     #Sub-function "send_request" manages requests main method to use multiples HTTP/s methods (GET, POST, PUT, UPDATE, etc), instead use "requests.get" or "requests.post" functions
-    def send_request(url,method,parameters=None,payload=None,headers=None, timeout=55):
+    def send_request(url,method,parameters=None,payload=None,headers=None, proxies=None, timeout=55):
         attempt_times, attempt_delay = max_retries, backoff_sec
         response = None
         while attempt_times >= 0:
             try:
                 if "https" in url:
-                    response = requests.request(method, url, params=parameters, headers=headers, data=payload, timeout=timeout)
+                    response = requests.request(method, url, params=parameters, headers=headers, data=payload, proxies=proxies, timeout=timeout)
                     raise_for_status(response)
                     return response
                 else:
@@ -145,7 +145,7 @@ def request_help(max_retries,backoff_sec):
         return response
     return send_request
 
-def get_token(username, password, tenant):
+def get_token(username, password, tenant, proxies):
     try:
         payload = {
             'username':username,
@@ -157,7 +157,7 @@ def get_token(username, password, tenant):
         if tenant != "default":
             payload['tenant_id'] = tenant
         reqhelp = request_help(2,10)
-        res = reqhelp(url=AUTH_URL,method="POST",payload=payload,headers=HEADERS)
+        res = reqhelp(url=AUTH_URL,method="POST",proxies=proxies,payload=payload,headers=HEADERS)
         res.raise_for_status()
         access_token = res.json()['access_token']
         return access_token

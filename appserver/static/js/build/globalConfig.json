@@ -2,7 +2,7 @@
     "meta": {
         "name": "Trellix_Splunk",
         "displayName": "Trellix MVision EPO Add-on for Splunk",
-        "version": "1.0.4",
+        "version": "1.0.6",
         "restRoot": "Trellix_Splunk",
         "schemaVersion": "0.0.3"
     },
