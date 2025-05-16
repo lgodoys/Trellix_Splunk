@@ -1,6 +1,7 @@
 RELEASE NOTES:
 
-Version 1.0.6: Apr 11, 2025 Solved minimum bugs in code, added support for proxied requests, removed Python Cache files and folders.
+Version 1.0.6: May 16, 2025
+Updated Trellix IAM URI because of Trellix changes, as documented in <https://docs.trellix.com/bundle/epolicy-orchestrator-saas-landing>
 
 Version 1.0.5: Apr 10, 2025
 Updated other Python libraries to latest versions. Added server.conf file to enable cluster replication.

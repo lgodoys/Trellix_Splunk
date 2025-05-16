@@ -13,7 +13,7 @@ Definition of base variables used in the program
 FROM_TZ = tz.gettz('UTC')
 TO_TZ = tz.tzlocal()
 helper = None
-AUTH_URL = "https://iam.mcafee-cloud.com/iam/v1.1/token"
+AUTH_URL = "https://iam.cloud.trellix.com/iam/v1.1/token"
 EVENT_PATH = '/eventservice/api/v2/events'
 HEADERS = {
     'Accept': 'application/json',
@@ -204,4 +204,3 @@ def keyMap(key):
         return key_map[key]
     else:
         return key
-        
