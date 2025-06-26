@@ -1,5 +1,8 @@
 RELEASE NOTES:
 
+Version 1.0.7: Jun 26, 2025
+Corrected timestamp converter function to check if the input argument is an integer or a string, and in case a string, convert into integer.
+
 Version 1.0.6: May 16, 2025
 Updated Trellix IAM URI because of Trellix changes, as documented in <https://docs.trellix.com/bundle/epolicy-orchestrator-saas-landing>
 

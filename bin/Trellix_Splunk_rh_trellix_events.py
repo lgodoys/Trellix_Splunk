@@ -20,19 +20,19 @@ fields = [
         encrypted=False,
         default=None,
         validator=validator.Pattern(
-            regex=r"""^\-[1-9]\d*$|^\d*$""", 
+            regex=r"""^\-[1-9]\d*$|^\d*$""",
         )
-    ), 
+    ),
     field.RestField(
         'index',
         required=True,
         encrypted=False,
         default='default',
         validator=validator.String(
-            min_len=1, 
-            max_len=80, 
+            min_len=1,
+            max_len=80,
         )
-    ), 
+    ),
     field.RestField(
         'global_account',
         required=True,
@@ -48,7 +48,6 @@ fields = [
 
 ]
 model = RestModel(fields, name=None)
-
 
 
 endpoint = DataInputModel(

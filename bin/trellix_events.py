@@ -13,6 +13,7 @@ import input_module_trellix_events as input_module
 
 bin_dir = os.path.basename(__file__)
 
+
 class ModInputtrellix_events(modinput_wrapper.BaseModInput):
 
     def __init__(self):
@@ -20,7 +21,8 @@ class ModInputtrellix_events(modinput_wrapper.BaseModInput):
             use_single_instance = input_module.use_single_instance_mode()
         else:
             use_single_instance = False
-        super(ModInputtrellix_events, self).__init__("trellix_splunk", "trellix_events", use_single_instance)
+        super(ModInputtrellix_events, self).__init__(
+            "trellix_splunk", "trellix_events", use_single_instance)
         self.global_checkbox_fields = None
         set_helper(self)
 
@@ -63,7 +65,8 @@ class ModInputtrellix_events(modinput_wrapper.BaseModInput):
 
     def get_global_checkbox_fields(self):
         if self.global_checkbox_fields is None:
-            checkbox_name_file = os.path.join(bin_dir, 'global_checkbox_param.json')
+            checkbox_name_file = os.path.join(
+                bin_dir, 'global_checkbox_param.json')
             try:
                 if os.path.isfile(checkbox_name_file):
                     with open(checkbox_name_file, 'r') as fp:
@@ -71,9 +74,11 @@ class ModInputtrellix_events(modinput_wrapper.BaseModInput):
                 else:
                     self.global_checkbox_fields = []
             except Exception as e:
-                self.log_error('Get exception when loading global checkbox parameter names. ' + str(e))
+                self.log_error(
+                    'Get exception when loading global checkbox parameter names. ' + str(e))
                 self.global_checkbox_fields = []
         return self.global_checkbox_fields
+
 
 if __name__ == "__main__":
     exitcode = ModInputtrellix_events().run(sys.argv)
