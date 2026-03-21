@@ -1,5 +1,8 @@
 RELEASE NOTES:
 
+Version 1.0.8: Mar 21, 2026
+Corrected an issue found with timestamp conversion while Trellix has changed the datetime format from millis to nanos. [Issue](<https://github.com/lgodoys/Trellix_Splunk/issues/2>)
+
 Version 1.0.7: Jun 26, 2025
 Corrected timestamp converter function to check if the input argument is an integer or a string, and in case a string, convert into integer.
 

@@ -12,6 +12,7 @@ Trellix MVision EPO Add-on for Splunk was developed to solve the data ingest fro
 - Version 1.0.5: Apr 10, 2025 Updated other Python libraries to latest versions. Added server.conf file to enable cluster replication.
 - Version 1.0.6: May 16, 2025 Updated Trellix IAM URI because of Trellix changes, as documented in <https://docs.trellix.com/bundle/epolicy-orchestrator-saas-landing>
 - Version 1.0.7: Jun 26, 2025 Corrected timestamp converter function to check if the input argument is an integer or a string, and in case a string, convert into integer.
+- Version 1.0.8: Mar 21, 2026 Corrected an issue found with timestamp conversion while Trellix has changed the datetime format from millis to nanos. [Issue](<https://github.com/lgodoys/Trellix_Splunk/issues/2>)
 
 ## Contributing
 

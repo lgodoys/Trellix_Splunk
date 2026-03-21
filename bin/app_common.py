@@ -68,6 +68,8 @@ def format_time(timestamp):
         ft_rule = '%Y-%m-%dT%H:%M:%S.%fZ'
     else:
         ft_rule = '%Y-%m-%dT%H:%M:%SZ'
+    if len(timestamp) > 24:
+        timestamp = timestamp[:26]+"Z"
     input_time = datetime.datetime.strptime(timestamp, ft_rule)
     input_time = input_time.replace(tzinfo=FROM_TZ)
     calc_time = input_time.astimezone(TO_TZ)
