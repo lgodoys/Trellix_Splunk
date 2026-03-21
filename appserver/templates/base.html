@@ -14,7 +14,7 @@
         <script src="${make_url('/static/js/i18n.js')}"></script>
         <script src="${make_url('/i18ncatalog?autoload=1')}"></script>
         <script>
-            __splunkd_partials__ = ${json_decode(splunkd)};
+            __splunkd_partials__ = ${json_decode(splunkd) |h};
         </script>
 
         <% page_path = "/static/app/" + app_name + "/js/build/entry_page.js" %>
